@@ -1,8 +1,15 @@
 <script setup lang="ts">
+import { ref } from 'vue';
+
+const props = defineProps({
+  modelValue: String,
+});
+
+const modelValue = ref(props.modelValue);
 </script>
 
 <template>
-  <input v-bind="$attrs" class="my-input" />
+  <input class="my-input" v-bind="$attrs" v-model="modelValue" />
 </template>
 
 <style scoped>
