@@ -1,16 +1,16 @@
 <script setup lang="ts">
-import { ref } from 'vue';
-import { Todo } from './types';
-import MyButton from './components/base/MyButton.vue';
-import MyInput from './components/base/MyInput.vue';
-import TodoItem from './components/TodoItem.vue';
-import RemoveTodoPopup from './components/RemoveTodoPopup.vue';
-
+import { ref } from "vue";
+import { Todo } from "./types";
+import MyButton from "./components/base/MyButton.vue";
+import MyInput from "./components/base/MyInput.vue";
+import TodoItem from "./components/TodoItem.vue";
+import RemoveTodoPopup from "./components/RemoveTodoPopup.vue";
+console.log("here");
 const todos = ref<Todo[]>([
-  { id: 1, title: 'Todo 1', userId: 1, completed: false },
-  { id: 2, title: 'Todo 2', userId: 1, completed: true },
-  { id: 3, title: 'Todo 3', userId: 1, completed: false },
-  { id: 4, title: 'Todo 4', userId: 1, completed: false },
+  { id: 1, title: "Todo 1", userId: 1, completed: false },
+  { id: 2, title: "Todo 2", userId: 1, completed: true },
+  { id: 3, title: "Todo 3", userId: 1, completed: false },
+  { id: 4, title: "Todo 4", userId: 1, completed: false },
 ]);
 
 const removingTodo = ref<Todo | null>(null);
